@@ -46,8 +46,8 @@ export default function Header() {
           </li>
         </ul>
         <div className="nav-cart">
-          <span>{products.length}</span>
           <Link to="/cart">
+            <span>{products.length}</span>
             <img src={Cart} alt="" width="20"></img>
           </Link>
         </div>

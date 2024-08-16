@@ -9,6 +9,10 @@ export function Cart() {
     return <p className="empty-cart">Your cart is empty</p>;
   }
 
+  const totalPrice = products.reduce((total, product) => {
+    return total + product.quantity * product.price;
+  }, 0);
+
   return (
     <div className="cart-container">
       {products.map((product, index) => (
@@ -24,6 +28,14 @@ export function Cart() {
             <div className="cart-quantity">
               <p>
                 <b>{product.quantity}</b>
+              </p>
+            </div>
+            <div className="cart-price">
+              <p>
+                <i>
+                  {product.quantity} x {product.price} ={" "}
+                </i>
+                <b>${product.quantity * product.price}</b>
               </p>
             </div>
           </div>
@@ -46,6 +58,9 @@ export function Cart() {
           </div>
         </div>
       ))}
+      <div className="cart-total">
+        <h2>Total Price: ${totalPrice.toFixed(products.length)}</h2>
+      </div>
     </div>
   );
 }
