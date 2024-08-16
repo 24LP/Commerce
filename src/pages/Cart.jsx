@@ -33,7 +33,7 @@ export function Cart() {
             <div className="cart-price">
               <p>
                 <i>
-                  {product.quantity} x {product.price} ={" "}
+                  {product.quantity} x ${product.price} ={" "}
                 </i>
                 <b>${product.quantity * product.price}</b>
               </p>
@@ -59,7 +59,14 @@ export function Cart() {
         </div>
       ))}
       <div className="cart-total">
-        <h2>Total Price: ${totalPrice.toFixed(products.length)}</h2>
+        <h2>
+          Total Price: <span>${totalPrice.toFixed(products.length)}</span>
+        </h2>
+      </div>
+      <div className="cart-payment">
+        <button>
+          <b>BUY</b>
+        </button>
       </div>
     </div>
   );

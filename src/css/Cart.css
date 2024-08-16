@@ -56,3 +56,23 @@
   font-size: 3rem;
   color: #33333380;
 }
+.cart-payment button {
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.cart-payment button:hover {
+  background-color: rgb(28, 185, 178);
+  box-shadow: rgb(30, 223, 213) 0 0 20px;
+}
+.cart-total span {
+  color: rgb(62, 184, 62);
+}
+.cart-total h2 {
+  color: #333333;
+}
